@@ -88,18 +88,17 @@ main {
 .content-header {
     display: flex;
     justify-content: flex-end;
-    flex: 1 1 0;
     border-right: 5px solid var(--content-header-blue);
     font-size:36px;
     color: var(--content-header-blue);
-    max-width:25%;
+    max-width:20%;
     margin-right: 25px;
 }
 
 .content-container h2 {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     margin-right:5px;
     width: 200px;
 }
@@ -110,34 +109,65 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-left: 25px;
-
 }
 
-#work .content-container {
-    flex-wrap: wrap;
 
-}
-#work .content {
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+#work .work-content .content {
+    display: flex;
+    position:relative;
+    flex: 1 0 0;
     align-items:flex-end;
-    width:50%;
-    /* flex: 0 1 none; */
+    opacity: 0.6;
+
 }
+
+#work .work-content .main-work {
+    display: flex;
+    position:relative;
+    flex: 2 0 0;
+    align-items:flex-end;
+    opacity: 0.6;
+
+}
+.work-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 25px;
+    width: 50%;
+}
+
+
+
+#work .work-content .content:hover {
+    opacity: 1.0 !important;
+
+}
+
+#work .work-content .main-work:hover {
+    opacity: 1.0 !important;
+
+}
+
+
 
 #work .content img{
-    display: flex;
-    order: 2;
-    /* flex: 1 1 none; */
     border: 10px solid var(--lightblue);
-    min-width: 40px;
-    max-height: 250px;
+    min-width: 150px;
+    max-width:200px;
+    /* width: 75%; */
+    /* max-height: 250px; */
+}
+
+#work .main-work img{
+    border: 10px solid var(--lightblue);
+    min-width: 250px;
+    width: 75%;
+    /* max-height: 250px; */
 }
 .project-name {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     position:absolute;
     background-color: var(--lightblue);
     color: var(--darkblue);
@@ -148,15 +178,39 @@ main {
 
 }
 
+.main-work .project-name {
+    flex-direction: column;
+    position:absolute;
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    margin-left: 10px;
+    margin-top: -60px;
+    padding-right:10px;
+    padding-left: 10px;
+
+}
+
 #work .content h3 {
     display: flex;
     margin-bottom: 0;
     margin-top: 0;
+}
 
-
+#work .main-work h3 {
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 #work .content p {
+    display: flex;
+    align-self: flex-start;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#work .main-work p {
     display: flex;
     align-self: flex-start;
     font-size: 12px;
